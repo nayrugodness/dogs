@@ -1,5 +1,5 @@
-const URL = "https://dog.ceo/api/breeds/image/random"
-const request = new XMLHttpRequest()
+let URL = "https://dog.ceo/api/breeds/image/random"
+let request = new XMLHttpRequest()
 
 
 request.onreadystatechange = ()=>{
@@ -7,7 +7,6 @@ request.onreadystatechange = ()=>{
         if(request.status === 200){
             var resultado = request.responseText
             var resultado_en_objeto = JSON.parse(resultado)
-            //console.log(resultado_en_objeto)
             const botoncuatro = document.getElementById('boton1');
             const botonocho = document.getElementById('boton2');
             const botondoce = document.getElementById('boton3');
@@ -55,7 +54,7 @@ request.onreadystatechange = ()=>{
                 
                 
                 for (let index = 0; index < cantidad; index++) {
-                    
+                
                     const card=document.createElement('div');
                     const img_card=document.createElement('img');
                     card.classList.add('card');
@@ -66,8 +65,7 @@ request.onreadystatechange = ()=>{
                     fragment.appendChild(card)
                 }
                 section.appendChild(fragment);
-            }
-            
+            }    
         }
     }
 };
