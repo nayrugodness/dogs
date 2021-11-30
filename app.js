@@ -32,7 +32,7 @@ request.onreadystatechange = ()=>{
                 create_card(cantidad);
             });
             botontodas.addEventListener('click', e=>{
-                cantidad = 12;
+                cantidad = 24;
                 create_card(cantidad);
             });
             
@@ -56,11 +56,10 @@ request.onreadystatechange = ()=>{
                 
                 for (let index = 0; index < cantidad; index++) {
                     
-                    
                     const card=document.createElement('div');
                     const img_card=document.createElement('img');
                     card.classList.add('card');
-                    img_card.setAttribute('id', 'card-img-top');
+                    img_card.setAttribute('class', 'card-img');
                     img_card.setAttribute('src', dogs[0]);
                     card.appendChild(img_card);
                     
